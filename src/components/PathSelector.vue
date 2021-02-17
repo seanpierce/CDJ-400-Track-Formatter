@@ -1,6 +1,8 @@
 <template>
     <div class="path-selector">
-        <button @click="getPath()">{{ label }}</button>
+        <span v-if="!path" @click="getPath()">{{ label }}</span>
+        <div v-if="path">{{ path }}</div>
+        <span v-if="path" @click="getPath()">Edit</span>
     </div>
 </template>
 
@@ -10,9 +12,17 @@ const { dialog } = require('electron').remote
 export default {
 
     props: {
+        name: {
+            type: String,
+            default: null    
+        },
         label: {
             type: String,
             default: 'Select Path'
+        },
+        path: {
+            type: String,
+            default: null
         }
     },
     
@@ -22,7 +32,12 @@ export default {
             dialog.showOpenDialog({
                 properties: ['openDirectory']
             }).then(data => {
-                console.log(data.filePaths[0])
+                let path = data.filePaths[0]
+                let payload = {
+                    name: this.name,
+                    path: path
+                }
+                this.$store.dispatch('setPath', payload)
             })
         }
     }

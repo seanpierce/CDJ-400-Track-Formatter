@@ -1,0 +1,72 @@
+$color1: #42b883;
+
+@import './home.scss';
+@import './nav.scss';
+@import './formatter.scss';
+
+@font-face {
+    font-family: roboto-mono;
+    src: url('../assets/fonts/Roboto_Mono/RobotoMono-VariableFont_wght.ttf');
+}
+
+* {
+    font-family: roboto-mono;
+    color: #333;
+    box-sizing: border-box;
+}
+
+.view {
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    padding: 1em;
+
+    h1 {
+        text-align: center;
+    }
+
+    hr {
+        border: solid 1px #333;
+        border-bottom: none;
+        margin: 2em auto;
+    }
+
+    button {
+        margin: 0.5em auto;
+        background: white;
+        padding: 8px 10px;
+        border: solid 1px #333;
+        border-radius: 0;
+        transition: all 0.25s;
+        cursor: pointer;
+    
+        &.full-width {
+            display: block;
+            width: 100%;
+        }
+    
+        &.half-width {
+            float: left;
+            width: 49%;
+            
+            &:last-child {
+                float: right;
+            }
+        }
+    
+        &:hover {
+            background: #333;
+            color: white;
+        }
+
+        &.color {
+            border: none;
+            color: white;
+            background: $color1;
+
+            &:hover {
+                background: darken($color: $color1, $amount: 10);
+            }
+        }
+    }
+}
