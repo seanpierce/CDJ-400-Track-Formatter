@@ -14,6 +14,11 @@ const routes = [
     path: '/format',
     name: 'Formatter',
     component: () => import('@/views/Formatter')
+  },
+  {
+    path: '/success',
+    namne: 'Success',
+    component: () => import('@/views/Success')
   }
 ]
 

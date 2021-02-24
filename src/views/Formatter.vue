@@ -78,6 +78,7 @@ export default {
             formater.format(this.action)
                 .then(() => {
                     console.log('Writing complete!')
+                    this.$router.push('/success')
                 })
         }
     },
