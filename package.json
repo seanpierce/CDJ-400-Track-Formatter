@@ -15,11 +15,15 @@
   "dependencies": {
     "core-js": "^3.6.5",
     "electron": "^11.2.3",
+    "file-type": "^16.2.0",
+    "music-metadata": "^7.8.0",
     "node-sass": "^4.0.0",
+    "read-chunk": "^3.2.0",
     "sass-loader": "10.0.1",
     "vue": "^2.6.11",
     "vue-router": "^3.2.0",
-    "vuex": "^3.4.0"
+    "vuex": "^3.4.0",
+    "walk": "^2.3.14"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
