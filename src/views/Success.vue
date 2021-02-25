@@ -3,7 +3,7 @@
         <h1>Success!</h1>
 
         <button
-            class="full-width"
+            class="full-width color"
             @click="open()">View Formatted Files
         </button>
 

@@ -3,7 +3,7 @@
         <router-link v-if="route !== 'Formatter'"
             to="/format"
             tag="button" 
-            class="full-width">
+            class="full-width color">
             Start
         </router-link>
 

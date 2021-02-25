@@ -36,21 +36,16 @@
             class="full-width color"
             @click="format()">Format
         </button>
-
-        <hr>
-        <Nav />
     </div>
 </template>
 
 <script>
 import Formatter from '@/formatter'
-import Nav from '@/components/Nav'
 import PathSelector from '@/components/PathSelector'
 
 export default {
 
     components: {
-        Nav,
         PathSelector
     },
 
