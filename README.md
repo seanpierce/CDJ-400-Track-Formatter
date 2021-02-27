@@ -2,7 +2,7 @@
 
 This project contains a native app for MacOS developed using Vue and Electron. The app allows a user to quickly format a group of tracks so that they are easily browsable on a set of Pioneer CDJ-400s.
 
-<img src="/src/assets/images/display.png">
+<img src="/src/assets/images/display.png" style="width:300px;">
 
 ## The Problem
 
